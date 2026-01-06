@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    color-scheme: dark;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+    @apply bg-slate-950 text-slate-100;
+}
+
+@layer components {
+    .btn-primary {
+        @apply inline-flex items-center gap-2 rounded-full bg-slate-900 text-white px-6 py-3 text-sm font-medium hover:bg-slate-800 transition;
+    }
+}
+
+.map-region {
+    transition: opacity 150ms ease, transform 150ms ease;
+    opacity: 0.9;
+}
+
+.map-region:hover {
+    opacity: 1;
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.15));
+}
+
+.map-region:focus {
+    outline: none;
+}
+
+.map-region:focus-visible {
+    stroke: #0f172a;
+    stroke-width: 2px;
+}
